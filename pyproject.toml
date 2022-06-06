@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "kafka_crypto_pricing"
+version = "0.1.0"
+description = "An implementation of the Kafka-Python framework in order to retrieve hourly pricing data for Bitcoin from the Coinbase API."
+authors = ["giacomo rognoni"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+kafka-python = "^2.0.2"
+requests = "^2.27.1"
+pandas = "^1.4.2"
+coinbase = "^2.1.0"
+click = "^8.1.3"
+[tool.poetry.dev-dependencies]
+black = "^22.3.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

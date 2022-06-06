@@ -4,17 +4,12 @@ from model.kafka import CoinbaseClient
 
 @click.group()
 def main() -> None:
-    kafka_client = CoinbaseClient()
+    pass
 
 
-@main.command()
-@click.option(
-    "--data",
-    prompt="Please add the string to be consumed",
-    help="The string to be consumed by the Kafka consumer client",
-)
-def produce(data: str) -> None:
-    kafka_client.produce(data)
+@main.command(help="Retrieve the Bitcoin price for the Coinbase API and pubblish to kafka topic")
+def produce() -> None:
+    kafka_client.produce()
     return None
 
 
@@ -25,4 +20,5 @@ def activate_consumer() -> str:
 
 
 if __name__ == "__main__":
+    kafka_client = CoinbaseClient()
     main()

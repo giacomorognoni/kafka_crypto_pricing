@@ -1,0 +1,8 @@
+import os
+
+SERVER="localhost:9092"
+TOPIC="test"
+CURRENCY_CODE="USD"
+PRICE_CALL_DELAY_SECONDS=30
+API_KEY=os.getenv('API_KEY', 'API_KEY')
+API_SECRET=os.getenv('API_SECRET', 'API_SECRET')
